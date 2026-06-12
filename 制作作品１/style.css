@@ -19,10 +19,17 @@ nav{
     background-color: #fffacd;
     padding: 15px;
 }
-.m{
-    border-radius: 30%;
+.main{
     background-color: antiquewhite;
     font-size: 40px;
-    padding: 10%;
-text-align: center;
+    padding: 8%;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+img{
+    top: -200px;
+    left: 30%;
+    position: relative;
+    z-index: 1;
 }
