@@ -1,0 +1,28 @@
+*{
+    margin: 0%;/* 外余白 */
+    padding: 0%;/*中余白 */
+}
+body{
+    background-color: white;
+}
+.t{
+    background-color: wheat;
+    font-size: 60px;
+    padding: 15px;/*　中余白 */
+    font-family: "Yu Gothic", sans-serif; /* フォント種類*/
+    text-align: center;/* 文字位置 */
+}
+nav{
+     display: flex;/* 横並びにする */
+    justify-content: center; /* 真ん中に配置 */
+    gap: 40px; /* ←ここが間隔 */
+    background-color: #fffacd;
+    padding: 15px;
+}
+.m{
+    border-radius: 30%;
+    background-color: antiquewhite;
+    font-size: 40px;
+    padding: 10%;
+text-align: center;
+}
