@@ -2,9 +2,22 @@
     margin: 0%;/* 外余白 */
     padding: 0%;/*中余白 */
 }
+
 body{
     background-color: white;
+    
+	font: 14px/1.6 "Hiragino Kaku Gothic Pro",Osaka,"メイリオ","ＭＳ Ｐゴシック","MS PGothic",Verdana,Arial,sans-serif;
+	width: 1200px;
+	margin: 0 auto;
+	color: #313131;
 }
+
+img{
+outline:none;
+border-style:none;
+text-align: center;
+}
+
 .t{
     background-color: wheat;
     font-size : 60px;
@@ -44,3 +57,13 @@ a {
 a:hover {
   color: #f2c30a;
 }
+li{
+  text-align: center;  
+}
+
+
+#branding {
+    width: 506px;
+    margin: 0px auto;
+}
+    
