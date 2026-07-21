@@ -1,69 +1,245 @@
+/* 全体リセット */
 *{
-    margin: 0%;/* 外余白 */
-    padding: 0%;/*中余白 */
+    margin:0;/* 外側余白 */
+    padding:0;/* 内側余白 */
+    box-sizing:border-box;/* サイズ計算方法*/
 }
 
+/* ページ全体 */
 body{
-    background-color: white;
-    
-	font: 14px/1.6 "Hiragino Kaku Gothic Pro",Osaka,"メイリオ","ＭＳ Ｐゴシック","MS PGothic",Verdana,Arial,sans-serif;
-	width: 1200px;
-	margin: 0 auto;
-	color: #313131;
+    background-color:white;/* 背景色 */
+    font:14px/1.6 "Hiragino Kaku Gothic Pro", Osaka, "メイリオ", "ＭＳ Ｐゴシック", Verdana, Arial, sans-serif;/* 文字設定 */
+    color:#313131;
 }
 
-img{
-outline:none;
-border-style:none;
-text-align: center;
-}
 
+/* タイトル */
 .t{
-    background-color: wheat;
-    font-size : 60px;
-    padding: 15px;/*　中余白 */
-    font-family: "Yu Gothic", sans-serif; /* フォント種類*/
-    text-align: center;/* 文字位置 */
+    background-color:wheat;
+    font-size:60px;/* 文字サイズ */
+    padding:15px;
+    font-family:"Yu Gothic", sans-serif;/* フォントサイズ */
+    text-align:center;/* 文字位置 */
 }
-nav {
-    justify-content: center; /* 真ん中に配置 */
-    gap: 40px; /* ←ここが間隔 */
-    background-color: rgb(127, 94, 35);
-    padding: 15px;
+
+
+/* メニュー */
+nav{
+    background-color:rgb(127,94,35);
+    padding:15px;
 }
+
+nav ul{
+    display:flex;
+    justify-content:center;/* 横方向の配置 */
+    gap:40px;/* 要素間の隙間 */
+    list-style:none;/* リストの表示設定 */
+}
+
+nav a{
+    text-decoration:none;
+    color:white;
+    font-weight:bold;/* 文字太さ */
+}
+
+nav a:hover{
+    color:#f2c30a;
+}
+
+
+/* メイン文字 */
 .main{
-    font-size: 40px;
-    padding: 8%;
-    font-family: "Noto Sans JP", sans-serif;
-    text-align: center;
-    position: relative;
-    z-index: 2;
-}
-nav ul {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    list-style: none;
-}
- nav a{
-    text-decoration: none;/* 下線なし */
-    color: rgb(255, 255, 255);
-    font-weight: bold;
-}
-a {
-  color: #333333;
-  text-decoration: none;
-}
-a:hover {
-  color: #f2c30a;
-}
-li{
-  text-align: center;  
+    font-size:40px;
+    padding:8%;
+    font-family:"Noto Sans JP", sans-serif;
+    text-align:center;
 }
 
 
-#branding {
-    width: 506px;
-    margin: 0px auto;
+/* 画像スライダー */
+#branding{
+    width:800px;/* 横幅 */
+    height:500px;/* 高さ */
+    margin:50px auto;
+    overflow:hidden;/* はみ出し設定 */
 }
-    
+
+
+.slider{
+    padding:0;
+    margin:0;
+    list-style:none;
+}
+.slider li{
+    text-align:center;
+}
+.slider img{
+    width:800px;
+    height:500px;
+    object-fit:cover;/* 画像の表示方法 */
+    display:block;
+    margin:0 auto;
+}
+
+#branding{
+    width:850px;
+    height:550px;
+    margin:50px auto;
+    padding:25px;
+
+    background-color:#f8f5ee; /* 少しベージュの白 */
+    border:1px solid #e5dfd3;/* 枠線 */
+    box-shadow:0 5px 15px rgba(0,0,0,0.15);
+}
+.slick-prev,
+.slick-next{
+    display:none !important;/*表示方法 */
+} /* スライド設定ここまで HOME*/
+
+/* 全体 */
+body{
+    margin:0;
+    padding:0;
+    background-color:#fff;
+    color:#333;
+    font-family:"Noto Sans JP","Yu Gothic",sans-serif;
+}
+
+
+/* ヘッダー */
+.t{
+    background-color:wheat;
+    font-size:60px;
+    padding:15px;
+    text-align:center;
+    font-weight:bold;
+    font-family:"Yu Gothic",sans-serif;
+}
+
+
+/* メニュー */
+nav{
+    background-color:rgb(127,94,35);
+    padding:15px;
+}
+
+nav ul{
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    list-style:none;
+}
+
+nav a{
+    text-decoration:none;
+    color:white;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:#f2c30a;
+}
+
+
+/* ページタイトル 博多*/
+.top{
+
+    width:90%;
+    max-width:900px;
+
+    margin:70px auto;
+
+    text-align:center;
+
+    font-size:38px;
+
+    font-family:"Noto Serif JP",serif;
+
+    font-weight:bold;
+
+    letter-spacing:3px;
+}
+
+
+/* スポット紹介 */
+.spot-text1,
+.spot-text{
+
+    margin:0 auto 9px;
+
+}
+
+/* 説明文 */
+/* スポットタイトル */
+.spot-text1 h3,
+.spot-text h3{
+
+    font-size:28px;
+
+    font-family:"Noto Serif JP",serif;
+
+    font-weight:bold;
+
+    line-height:1.6;
+
+    margin:0 auto 25px;
+
+    border-left:6px solid rgb(127,94,35);
+
+    padding-left:15px;
+
+    display:table;
+
+}
+
+/* 写真 */
+.spot-text1 img,
+.spot-text img{
+
+    width:850px;
+
+    height:450px;
+
+    object-fit:cover;
+
+    display:block;
+
+    margin:0 auto 30px;
+
+}
+
+
+/* 説明文 */
+.spot-text1 p,
+.spot-text p{
+
+    font-size:16px;
+
+    line-height:2;
+
+    letter-spacing:1px;
+
+    max-width:850px;
+
+    margin:30px auto;
+
+    text-align:left;
+
+}
+
+
+/* 住所など見やすくする */
+.spot-text1 p::first-line,
+.spot-text p::first-line{
+
+    font-weight:bold;
+
+}
+
+
+html,
+body{
+
+    overflow-x:hidden;
+
+}

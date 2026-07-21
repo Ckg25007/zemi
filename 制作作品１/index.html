@@ -1,47 +1,80 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>福岡夜景紹介</title>
+
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
-    <link href="js/slick-theme.css" rel="stylesheet" type="text/css">
-    <link href="js/slick.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="js/slick.css">
+    <link rel="stylesheet" href="js/slick-theme.css">
 
-    	<link href="css/ress.css" rel="stylesheet" type="text/css">
-		<link href="css/css.css" rel="stylesheet" type="text/css">
-		<script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
-		<script type="text/javascript" src="js/slick.min.js"></script>
+    <!-- jQuery・Slick -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+    <script src="js/slick.min.js"></script>
+
 </head>
+
+
 <body>
-    <header>
-        <div class="t">福岡夜景紹介</div>
-    </header>
-    <nav>
-        <ul>
-            <li><a href="#home">・ホーム</a></li>
-            <li><a href="#hakata">・博多・福岡市エリア</a></li>
-            <li><a href="#kurume">・久留米・筑後エリア</a></li>
-            <li><a href="#kitakyushu">・北九州エリア</a></li>
-        </ul>
-    </nav>
 
-    <div id="branding">
-			<ul class="slider">
-				<li><a href="#"><img src="images/01.jpg" width="550px" alt="image01"></a></li>
-				<li><a href="#"><img src="images/02.jpg" width="550px" alt="image02"></a></li>
-				<li><a href="#"><img src="images/03.jpg" width="550px" alt="image03"></a></li>
-				<li><a href="#"><img src="images/04.jpg" width="550px" alt="image04"></a></li>
-				<li><a href="#"><img src="images/05.jpg" width="550px" alt="image05"></a></li>
-			</ul>
-		</div>
+<header>
+    <div class="t">
+        福岡夜景紹介
+    </div>
+</header>
+
+
+<nav>
+    <ul>
+        <li><a href="index.html">・ホーム</a></li>
+        <li><a href="hakata.html">・博多・福岡市エリア</a></li>
+        <li><a href="kurume.html">・久留米・筑後エリア</a></li>
+        <li><a href="kitakyushu.html">・北九州エリア</a></li>
+    </ul>
+</nav>
+
+<!-- 夜景スライダー -->
+<div id="branding">
+
+  <ul class="slider">
+
+    <li>
+        <a href="kurume.html">
+        <img src="images/素材/高良山/IMG_0020.jpg" alt="高良山">
+        </a>
+    </li>
+
+    <li>
+        <a href="kitakyushu.html">
+        <img src="images/素材/皿倉山/image2.jpeg" alt="皿倉山">
+        </a>
+    </li>
+
+    <li>
+        <a href="hakata.html">
+        <img src="images/素材/米の山/image2.jpeg" alt="米の山展望台">
+        </a>
+    </li>
     
-		<script>$('.slider').slick({
-		autoplay:true,
-		autoplaySpeed:2000,
-		dots:true,});
-		</script>
+</ul>
+</div>
 
 
+<!-- スライダー設定 -->
+<script>
+
+$('.slider').slick({
+
+    autoplay:true,        // 自動再生
+    autoplaySpeed:3000,   // 切り替え速度
+    dots:true             // 下の丸を表示
+
+});
+
+</script>
 </body>
 </html>
