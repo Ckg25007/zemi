@@ -1,112 +1,31 @@
-/* 全体リセット */
+/* =========================
+   全体設定
+========================= */
+
 *{
-    margin:0;/* 外側余白 */
-    padding:0;/* 内側余白 */
-    box-sizing:border-box;/* サイズ計算方法*/
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-/* ページ全体 */
+html,
 body{
-    background-color:white;/* 背景色 */
-    font:14px/1.6 "Hiragino Kaku Gothic Pro", Osaka, "メイリオ", "ＭＳ Ｐゴシック", Verdana, Arial, sans-serif;/* 文字設定 */
+    overflow-x:hidden;
+}
+
+body{
+    background-color:white;
     color:#313131;
-}
-
-
-/* タイトル */
-.t{
-    background-color:wheat;
-    font-size:60px;/* 文字サイズ */
-    padding:15px;
-    font-family:"Yu Gothic", sans-serif;/* フォントサイズ */
-    text-align:center;/* 文字位置 */
-}
-
-
-/* メニュー */
-nav{
-    background-color:rgb(127,94,35);
-    padding:15px;
-}
-
-nav ul{
-    display:flex;
-    justify-content:center;/* 横方向の配置 */
-    gap:40px;/* 要素間の隙間 */
-    list-style:none;/* リストの表示設定 */
-}
-
-nav a{
-    text-decoration:none;
-    color:white;
-    font-weight:bold;/* 文字太さ */
-}
-
-nav a:hover{
-    color:#f2c30a;
-}
-
-
-/* メイン文字 */
-.main{
-    font-size:40px;
-    padding:8%;
-    font-family:"Noto Sans JP", sans-serif;
-    text-align:center;
-}
-
-
-/* 画像スライダー */
-#branding{
-    width:800px;/* 横幅 */
-    height:500px;/* 高さ */
-    margin:50px auto;
-    overflow:hidden;/* はみ出し設定 */
-}
-
-
-.slider{
-    padding:0;
-    margin:0;
-    list-style:none;
-}
-.slider li{
-    text-align:center;
-}
-.slider img{
-    width:800px;
-    height:500px;
-    object-fit:cover;/* 画像の表示方法 */
-    display:block;
-    margin:0 auto;
-}
-
-#branding{
-    width:850px;
-    height:550px;
-    margin:50px auto;
-    padding:25px;
-
-    background-color:#f8f5ee; /* 少しベージュの白 */
-    border:1px solid #e5dfd3;/* 枠線 */
-    box-shadow:0 5px 15px rgba(0,0,0,0.15);
-}
-.slick-prev,
-.slick-next{
-    display:none !important;/*表示方法 */
-} /* スライド設定ここまで HOME*/
-
-/* 全体 */
-body{
-    margin:0;
-    padding:0;
-    background-color:#fff;
-    color:#333;
     font-family:"Noto Sans JP","Yu Gothic",sans-serif;
+    font-size:14px;
+    line-height:1.6;
 }
 
 
-/* ヘッダー */
+/* =========================
+   ヘッダー
+========================= */
+
 .t{
     background-color:wheat;
     font-size:60px;
@@ -117,7 +36,10 @@ body{
 }
 
 
-/* メニュー */
+/* =========================
+   メニュー
+========================= */
+
 nav{
     background-color:rgb(127,94,35);
     padding:15px;
@@ -141,9 +63,11 @@ nav a:hover{
 }
 
 
-/* ページタイトル 博多*/
-.top{
+/* =========================
+   ページタイトル
+========================= */
 
+.top{
     width:90%;
     max-width:900px;
 
@@ -161,16 +85,18 @@ nav a:hover{
 }
 
 
-/* スポット紹介 */
+/* =========================
+   スポット紹介
+========================= */
+
 .spot-text1,
 .spot-text{
-
-    margin:0 auto 9px;
-
+    margin:0 auto 60px;
 }
 
-/* 説明文 */
+
 /* スポットタイトル */
+
 .spot-text1 h3,
 .spot-text h3{
 
@@ -189,10 +115,13 @@ nav a:hover{
     padding-left:15px;
 
     display:table;
-
 }
 
-/* 写真 */
+
+/* =========================
+   写真
+========================= */
+
 .spot-text1 img,
 .spot-text img{
 
@@ -205,11 +134,13 @@ nav a:hover{
     display:block;
 
     margin:0 auto 30px;
-
 }
 
 
-/* 説明文 */
+/* =========================
+   説明文
+========================= */
+
 .spot-text1 p,
 .spot-text p{
 
@@ -224,22 +155,300 @@ nav a:hover{
     margin:30px auto;
 
     text-align:left;
-
 }
 
 
-/* 住所など見やすくする */
-.spot-text1 p::first-line,
-.spot-text p::first-line{
+/* 住所など強調 */
+
+.spot-text1 strong,
+.spot-text strong{
 
     font-weight:bold;
+}
+
+
+/* =========================
+   HOME スライダー
+========================= */
+
+#branding{
+
+    width:850px;
+
+    height:550px;
+
+    margin:50px auto;
+
+    padding:25px;
+
+    background-color:#f8f5ee;
+
+    border:1px solid #e5dfd3;
+
+    box-shadow:0 5px 15px rgba(0,0,0,0.15);
+}
+
+
+.slider{
+
+    padding:0;
+
+    margin:0;
+
+    list-style:none;
+}
+
+
+.slider li{
+
+    text-align:center;
+}
+
+
+.slider img{
+
+    width:800px;
+
+    height:500px;
+
+    object-fit:cover;
+
+    display:block;
+
+    margin:0 auto;
+}
+
+
+/* スライド矢印非表示 */
+
+.slick-prev,
+.slick-next{
+
+    display:none !important;
+
+}
+
+/* レスポンシブ対応 */
+
+
+/* タブレット */
+@media screen and (max-width:1024px){
+
+    /* タイトル */
+    .t{
+        font-size:45px;
+    }
+
+
+    /* メニュー */
+    nav ul{
+        gap:20px;
+    }
+
+
+    nav a{
+        font-size:14px;
+    }
+
+
+    /* ページタイトル */
+    .top{
+        font-size:32px;
+    }
+
+
+    /* タイトル */
+    .spot-text1 h3,
+    .spot-text h3{
+
+        width:90%;
+
+        font-size:24px;
+
+    }
+
+
+    /* 写真 */
+    .spot-text1 img,
+    .spot-text img{
+
+        width:90%;
+
+        height:auto;
+
+    }
+
+
+    /* 説明文 */
+    .spot-text1 p,
+    .spot-text p{
+
+        width:90%;
+
+    }
+
+
+    /* スライダー */
+    #branding{
+
+        width:90%;
+
+        height:auto;
+
+    }
+
+
+    .slider img{
+
+        width:100%;
+
+        height:auto;
+
+    }
 
 }
 
 
-html,
-body{
 
-    overflow-x:hidden;
+
+/* スマホ */
+@media screen and (max-width:600px){
+
+
+    /* ヘッダー */
+    .t{
+
+        font-size:30px;
+
+        padding:15px 5px;
+
+    }
+
+
+
+    /* ナビ */
+    nav{
+
+        padding:10px;
+
+    }
+
+
+    nav ul{
+
+        flex-direction:column;
+
+        align-items:center;
+
+        gap:12px;
+
+    }
+
+
+    nav a{
+
+        font-size:14px;
+
+    }
+
+
+
+    /* ページタイトル */
+
+    .top{
+
+        width:95%;
+
+        margin:35px auto;
+
+        font-size:22px;
+
+        letter-spacing:1px;
+
+    }
+
+
+
+    /* スポット */
+
+    .spot-text1,
+    .spot-text{
+
+        margin-bottom:40px;
+
+    }
+
+
+
+    /* スポットタイトル */
+
+    .spot-text1 h3,
+    .spot-text h3{
+
+
+        width:90%;
+
+        font-size:18px;
+
+        line-height:1.5;
+
+        border-left:4px solid rgb(127,94,35);
+
+        padding-left:10px;
+
+    }
+
+
+
+    /* 写真 */
+
+    .spot-text1 img,
+    .spot-text img{
+
+        width:90%;
+
+        height:auto;
+
+    }
+
+
+
+    /* 説明 */
+
+    .spot-text1 p,
+    .spot-text p{
+
+        width:90%;
+
+        font-size:14px;
+
+        line-height:1.8;
+
+        letter-spacing:0;
+
+    }
+
+
+
+    /* スライダー */
+
+    #branding{
+
+        width:95%;
+
+        padding:10px;
+
+    }
+
+
+
+    .slider img{
+
+        width:100%;
+
+        height:auto;
+
+    }
+
 
 }
