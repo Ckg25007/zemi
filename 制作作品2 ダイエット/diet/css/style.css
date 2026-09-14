@@ -1,554 +1,464 @@
+/* =========================
+   全体設定
+========================= */
+
 *{
-
-margin:0;
-
-padding:0;
-
-box-sizing:border-box;
-
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
-
-
 
 body{
-
-font-family:"Yu Gothic",sans-serif;
-
-background:#fafafa;
-
-color:#333;
-
+    font-family:"Yu Gothic",sans-serif;
+    background:#f5f1eb;
+    color:#333;
 }
 
 
-
-
-/* ヘッダー */
+/* =========================
+   ヘッダー
+========================= */
 
 header{
-
-background:white;
-
-text-align:center;
-
-padding:40px 0;
-
+    background:white;
+    text-align:center;
+    padding:45px 20px;
 }
 
 
+/* サイトタイトル */
 
 h1{
-
-font-size:45px;
-
-letter-spacing:3px;
-
-margin-bottom:35px;
-
+    font-size:60px;
+    letter-spacing:4px;
+    margin-bottom:35px;
+    font-weight:bold;
 }
 
 
-
-
-
-/* メニュー */
+/* =========================
+   メニュー
+========================= */
 
 nav ul{
-
-display:flex;
-
-justify-content:center;
-
-gap:45px;
-
-list-style:none;
-
+    display:flex;
+    justify-content:center;
+    gap:45px;
+    list-style:none;
 }
-
-
 
 nav a{
-
-text-decoration:none;
-
-font-size:18px;
-
-font-weight:bold;
-
-color:#333;
-
+    text-decoration:none;
+    font-size:18px;
+    font-weight:bold;
+    color:#333;
 }
-
-
 
 nav a:hover{
-
-color:#c7955a;
-
+    color:#c7955a;
 }
 
 
-
-
-
-/*ランキング*/
+/* =========================
+   HOME ランキング
+========================= */
 
 .ranking{
-
-width:1100px;
-
-margin:70px auto;
-
+    width:1100px;
+    max-width:90%;
+    margin:70px auto;
 }
-
-
 
 .ranking h2{
-
-text-align:center;
-
-font-size:35px;
-
-margin-bottom:50px;
-
+    text-align:center;
+    font-size:35px;
+    margin-bottom:50px;
 }
 
 
-
-
+/* 1位＋2～5位 */
 
 .rank-area{
-
-display:flex;
-
-gap:40px;
-
-align-items:center;
-
+    display:flex;
+    gap:40px;
+    align-items:center;
 }
 
 
-
-
-
-/* 1位 */
+/* =========================
+   1位
+========================= */
 
 .rank-first{
-
-width:450px;
-
-background:white;
-
-padding:25px;
-
-border-radius:20px;
-
-box-shadow:0 5px 20px rgba(0,0,0,0.1);
-
+    width:450px;
+    background:white;
+    padding:25px;
+    border-radius:20px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.1);
 }
-
-
 
 .rank-first img{
-
-width:100%;
-
-height:350px;
-
-object-fit:cover;
-
-border-radius:15px;
-
+    width:100%;
+    height:350px;
+    object-fit:cover;
+    border-radius:15px;
 }
-
-
-
 
 .rank-first h3{
-
-font-size:25px;
-
-margin:15px 0;
-
+    font-size:25px;
+    margin:15px 0;
 }
 
 
-
-
-
-/* 2～5位 */
+/* =========================
+   2～5位
+========================= */
 
 .rank-list{
-
-display:grid;
-
-grid-template-columns:220px 220px;
-
-gap:25px;
-
+    display:grid;
+    grid-template-columns:220px 220px;
+    gap:25px;
 }
-
-
-
 
 .rank-box{
-
-background:white;
-
-padding:15px;
-
-border-radius:15px;
-
-box-shadow:0 5px 15px rgba(0,0,0,0.08);
-
+    background:white;
+    padding:15px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
 }
-
-
 
 .rank-box img{
-
-width:100%;
-
-height:140px;
-
-object-fit:cover;
-
-border-radius:10px;
-
+    width:100%;
+    height:140px;
+    object-fit:cover;
+    border-radius:10px;
 }
-
-
 
 .rank-box h3{
-
-font-size:18px;
-
-margin-top:10px;
-
+    font-size:18px;
+    margin-top:10px;
 }
-
-
 
 .rank-box p,
 .rank-first p{
-
-font-weight:bold;
-
-color:#c7955a;
-
+    font-weight:bold;
+    color:#c7955a;
 }
 
 
-/* スマホ対応 */
-
-@media(max-width:900px){
-
-
-.ranking{
-
-width:90%;
-
-}
-
-.rank-area{
-
-flex-direction:column;
-
-}
-
-.rank-list{
-
-grid-template-columns:1fr 1fr;
-
-}
-
-}
-
-
-/* 食事管理ページ */
+/* =========================
+   食事管理・おすすめ食材
+========================= */
 
 .food-page{
-
-width:1100px;
-
-margin:70px auto;
-
+    width:1100px;
+    max-width:90%;
+    margin:70px auto;
 }
-
-
 
 .food-page h2,
 .point h2{
-
-text-align:center;
-
-font-size:35px;
-
-margin-bottom:30px;
-
+    text-align:center;
+    font-size:35px;
+    margin-bottom:30px;
 }
-
-
 
 .intro{
-
-text-align:center;
-
-font-size:18px;
-
-margin-bottom:50px;
-
+    text-align:center;
+    font-size:18px;
+    margin-bottom:50px;
 }
 
 
-
+/* ★ 3列に統一 */
 
 .food-container{
-
-display:grid;
-
-grid-template-columns:repeat(2,1fr);
-
-gap:40px;
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap:40px;
 
 }
 
 
-
+/* カード */
 
 .food-card{
-
-background:white;
-
-padding:25px;
-
-border-radius:20px;
-
-box-shadow:0 5px 20px rgba(0,0,0,0.1);
-
+    background:white;
+    padding:25px;
+    border-radius:20px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.1);
+    transition:0.3s;
 }
-
-
-
-.food-card img{
-
-width:100%;
-
-height:250px;
-
-object-fit:cover;
-
-border-radius:15px;
-
-}
-
-
-
-.food-card h3{
-
-font-size:25px;
-
-margin:15px 0;
-
-}
-
-
-
-
-.point{
-
-width:800px;
-
-margin:80px auto;
-
-background:white;
-
-padding:40px;
-
-border-radius:20px;
-
-}
-
-
-
-.point li{
-
-font-size:18px;
-
-margin:15px;
-
-}
-
-
-
-@media(max-width:900px){
-
-
-.food-page{
-
-width:90%;
-
-}
-
-
-.food-container{
-
-grid-template-columns:1fr;
-
-}
-
-
-}
-
-/* 食材ページ */
-
-
-.food-container{
-
-display:grid;
-
-grid-template-columns:repeat(3,1fr);
-
-gap:35px;
-
-}
-
-
-
-.food-card{
-
-transition:0.3s;
-
-}
-
-
 
 .food-card:hover{
-
-transform:translateY(-8px);
-
+    transform:translateY(-8px);
 }
 
+.food-card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    border-radius:15px;
+}
 
-
+.food-card h3{
+    font-size:23px;
+    margin:15px 0;
+}
 
 .food-card p{
-
-line-height:1.8;
-
+    line-height:1.8;
 }
 
 
+/* =========================
+   食事で意識したこと
+========================= */
 
+.point{
+    width:800px;
+    max-width:90%;
+    margin:80px auto;
+    background:white;
+    padding:40px;
+    border-radius:20px;
+}
 
-
-@media(max-width:900px){
-
-
-.food-container{
-
-grid-template-columns:1fr;
-
+.point li{
+    font-size:18px;
+    margin:15px;
 }
 
 
-}
-
-
-/* スケジュール */
+/* =========================
+   運動スケジュール
+========================= */
 
 .schedule{
-
-width:900px;
-
-margin:80px auto;
-
+    width:900px;
+    max-width:90%;
+    margin:80px auto;
 }
-
 
 .schedule h2,
 .metabolism h2{
-
-text-align:center;
-
-font-size:35px;
-
-margin-bottom:30px;
-
+    text-align:center;
+    font-size:35px;
+    margin-bottom:30px;
 }
 
 
+/* 表 */
 
 table{
-
-width:100%;
-
-border-collapse:collapse;
-
-background:white;
-
+    width:100%;
+    border-collapse:collapse;
+    background:white;
 }
-
-
 
 th{
+    background:#eee;
+}
 
-background:#eee;
-
+th,
+td{
+    padding:20px;
+    border:1px solid #ddd;
+    text-align:center;
 }
 
 
-
-th,td{
-
-padding:20px;
-
-border:1px solid #ddd;
-
-text-align:center;
-
-}
-
-
-
-
-
-/* 基礎代謝 */
+/* =========================
+   基礎代謝
+========================= */
 
 .metabolism{
-
-width:800px;
-
-margin:80px auto;
-
-background:white;
-
-padding:40px;
-
-border-radius:20px;
-
-line-height:2;
-
+    width:800px;
+    max-width:90%;
+    margin:80px auto;
+    background:white;
+    padding:40px;
+    border-radius:20px;
+    line-height:2;
 }
-
-
 
 .metabolism h3{
+    margin-top:25px;
+}
 
-margin-top:25px;
+.example{
+    margin-top:30px;
+    padding:20px;
+    background:#fafafa;
+    border-radius:15px;
+}
+
+
+/* =========================
+   タブレット
+========================= */
+
+@media(max-width:1024px){
+
+    h1{
+        font-size:50px;
+    }
+
+    nav ul{
+        gap:25px;
+    }
+
+    nav a{
+        font-size:16px;
+    }
+
+    .rank-area{
+        flex-direction:column;
+    }
+
+    .rank-first{
+        width:600px;
+        max-width:100%;
+    }
+
+    .rank-list{
+        grid-template-columns:repeat(2,1fr);
+        width:100%;
+    }
+
+    .food-container{
+        grid-template-columns:repeat(2,1fr);
+    }
 
 }
 
 
+/* =========================
+   スマホ
+========================= */
 
-.example{
+@media(max-width:600px){
 
-margin-top:30px;
+    header{
+        padding:30px 10px;
+    }
 
-padding:20px;
+    /* タイトル */
 
-background:#fafafa;
+    h1{
+        font-size:32px;
+        letter-spacing:2px;
+        margin-bottom:25px;
+    }
 
-border-radius:15px;
+
+    /* メニュー */
+
+    nav ul{
+        flex-direction:column;
+        gap:12px;
+    }
+
+    nav a{
+        font-size:15px;
+    }
+
+
+    /* ランキング */
+
+    .ranking{
+        max-width:90%;
+        margin:50px auto;
+    }
+
+    .ranking h2{
+        font-size:26px;
+        margin-bottom:35px;
+    }
+
+    .rank-first{
+        width:100%;
+    }
+
+    .rank-first img{
+        height:280px;
+    }
+
+    .rank-list{
+        grid-template-columns:1fr 1fr;
+        gap:15px;
+    }
+
+    .rank-box{
+        padding:12px;
+    }
+
+    .rank-box img{
+        height:120px;
+    }
+
+    .rank-box h3{
+        font-size:16px;
+    }
+
+
+    /* 食事管理 */
+
+    .food-page{
+        width:90%;
+        margin:50px auto;
+    }
+
+    .food-page h2,
+    .point h2,
+    .schedule h2,
+    .metabolism h2{
+        font-size:28px;
+    }
+
+    .intro{
+        font-size:16px;
+    }
+
+
+    /* スマホでは1列 */
+
+    .food-container{
+        grid-template-columns:1fr;
+        gap:25px;
+    }
+
+    .food-card img{
+        height:220px;
+    }
+
+
+    /* ポイント */
+
+    .point{
+        width:90%;
+        padding:25px;
+    }
+
+
+    /* スケジュール */
+
+    .schedule{
+        width:90%;
+    }
+
+    th,
+    td{
+        padding:12px 5px;
+        font-size:13px;
+    }
+
+
+    /* 基礎代謝 */
+
+    .metabolism{
+        width:90%;
+        padding:25px;
+    }
 
 }
