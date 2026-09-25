@@ -234,14 +234,14 @@ nav a:hover{
    運動スケジュール
 ========================= */
 
-.schedule{
+.suke{
     width:900px;
     max-width:90%;
     margin:80px auto;
 }
 
-.schedule h2,
-.metabolism h2{
+.suke h2,
+.kiso h2{
     text-align:center;
     font-size:35px;
     margin-bottom:30px;
@@ -272,7 +272,7 @@ td{
    基礎代謝
 ========================= */
 
-.metabolism{
+.kiso{
     width:800px;
     max-width:90%;
     margin:80px auto;
@@ -282,11 +282,11 @@ td{
     line-height:2;
 }
 
-.metabolism h3{
+.kiso h3{
     margin-top:25px;
 }
 
-.example{
+.keisan{
     margin-top:30px;
     padding:20px;
     background:#fafafa;
