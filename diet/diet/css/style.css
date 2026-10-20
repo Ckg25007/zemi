@@ -2,583 +2,898 @@
    全体設定
 ========================= */
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-body{
-    font-family:"Yu Gothic",sans-serif;
-    background:#f5f1eb;
-    color:#333;
-    background-image:url(../images/素材/BG.jpg);
+body {
+    font-family: "Yu Gothic", "Meiryo", sans-serif;
+    background-color: #f5f1eb;
+    background-image: url("../images/素材/BG.jpg");
+    background-repeat: repeat;
+    background-position: center top;
+    color: #333;
+    line-height: 1.7;
 }
 
+img {
+    max-width: 100%;
+}
 
 /* =========================
-   ヘッダー
+   ヘッダー・ナビゲーション
 ========================= */
 
-header{
-    background:white;
-    text-align:center;
-    padding:45px 20px;
+header {
+    background: #fff;
+    text-align: center;
+    padding: 40px 20px;
 }
 
-
-/* サイトタイトル */
-
-h1{
-    font-size:60px;
-    letter-spacing:4px;
-    margin-bottom:35px;
-    font-weight:bold;
+header h1 {
+    font-size: 60px;
+    letter-spacing: 4px;
+    margin-bottom: 30px;
+    font-weight: bold;
+    line-height: 1.3;
 }
 
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 18px 40px;
+    list-style: none;
+}
+
+nav a {
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: bold;
+    color: #333;
+    transition: color 0.2s;
+}
+
+nav a:hover,
+nav a:focus-visible {
+    color: #c7955a;
+}
 
 /* =========================
-   メニュー
+   共通ページ見出し
+   food.html / syokuzai.html / training.html
 ========================= */
 
-nav ul{
-    display:flex;
-    justify-content:center;
-    gap:45px;
-    list-style:none;
+.food-heading {
+    width: 1100px;
+    max-width: 90%;
+    margin: 60px auto 70px;
+    padding: 55px 25px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.94);
+    border-radius: 22px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
 }
 
-nav a{
-    text-decoration:none;
-    font-size:18px;
-    font-weight:bold;
-    color:#333;
+.food-heading .food-subtitle {
+    color: #c7955a;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    margin-bottom: 15px;
 }
 
-nav a:hover{
-    color:#c7955a;
+.food-heading h2 {
+    font-size: 38px;
+    margin-bottom: 20px;
 }
 
+.food-heading .food-catch {
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.food-heading .food-catch span {
+    color: #a9783f;
+}
+
+.food-heading .intro {
+    font-size: 17px;
+    line-height: 2;
+    margin-bottom: 0;
+}
 
 /* =========================
-   HOME ランキング
+   共通：食事・食材・運動カード
 ========================= */
 
-.ranking{
-    width:1100px;
-    max-width:90%;
-    margin:70px auto;
+.food-page {
+    width: 1100px;
+    max-width: 90%;
+    margin: 70px auto;
 }
 
-.ranking h2{
-    text-align:center;
-    font-size:35px;
-    margin-bottom:50px;
+.food-section-title,
+.training-section-title {
+    text-align: center;
+    margin-bottom: 40px;
 }
 
-
-/* 1位＋2～5位 */
-
-.rank-area{
-    display:flex;
-    gap:40px;
-    align-items:center;
+.food-section-title > p,
+.training-section-title > p {
+    color: #c7955a;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    margin-bottom: 10px;
 }
 
+.food-section-title h2,
+.training-section-title h2 {
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+.food-section-title > span,
+.training-section-title > span {
+    color: #666;
+    font-size: 14px;
+}
+
+.intro {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 50px;
+}
+
+.food-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px;
+}
+
+.food-card {
+    min-width: 0;
+    background: #fff;
+    padding: 22px;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.food-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+.food-card img {
+    display: block;
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 14px;
+}
+
+.food-card .meal-label {
+    color: #a9783f;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-top: 20px;
+}
+
+.food-card h3 {
+    font-size: 25px;
+    margin: 8px 0 12px;
+    line-height: 1.5;
+}
+
+.food-card > p:last-child {
+    font-size: 15px;
+    line-height: 2;
+    color: #555;
+}
 
 /* =========================
-   1位
+   HOME：ランキング
 ========================= */
 
-.rank-first{
-    width:450px;
-    background:white;
-    padding:25px;
-    border-radius:20px;
-    box-shadow:0 5px 20px rgba(0,0,0,0.1);
+.ranking {
+    width: 1100px;
+    max-width: 90%;
+    margin: 70px auto;
 }
 
-.rank-first img{
-    width:100%;
-    height:350px;
-    object-fit:cover;
-    border-radius:15px;
+.ranking-subtitle {
+    text-align: center;
+    color: #c7955a;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    margin-bottom: 12px;
 }
 
-.rank-first h3{
-    font-size:25px;
-    margin:15px 0;
+.ranking h2 {
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 15px;
 }
 
-
-/* =========================
-   2～5位
-========================= */
-
-.rank-list{
-    display:grid;
-    grid-template-columns:220px 220px;
-    gap:25px;
+.ranking-intro {
+    text-align: center;
+    margin-bottom: 40px;
+    line-height: 1.8;
 }
 
-.rank-box{
-    background:white;
-    padding:15px;
-    border-radius:15px;
-    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+.rank-area {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+    gap: 30px;
+    align-items: stretch;
 }
 
-.rank-box img{
-    width:100%;
-    height:140px;
-    object-fit:cover;
-    border-radius:10px;
+.rank-first {
+    min-width: 0;
+    background: #fff;
+    padding: 25px;
+    border: 2px solid #c7955a;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
 }
 
-.rank-box h3{
-    font-size:18px;
-    margin-top:10px;
+.rank-number {
+    color: #c7955a;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
 }
 
-.rank-box p,
-.rank-first p{
-    font-weight:bold;
-    color:#c7955a;
+.rank-first img {
+    display: block;
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 15px;
 }
 
-
-/* =========================
-   食事管理・おすすめ食材
-========================= */
-
-.food-page{
-    width:1100px;
-    max-width:90%;
-    margin:70px auto;
+.rank-first h3 {
+    font-size: 25px;
+    margin: 18px 0 12px;
 }
 
-.food-page h2,
-.point h2{
-    text-align:center;
-    font-size:35px;
-    margin-bottom:30px;
+.rank-first p:not(.rank-number) {
+    font-size: 14px;
+    line-height: 1.8;
 }
 
-.intro{
-    text-align:center;
-    font-size:18px;
-    margin-bottom:50px;
+.rank-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    min-width: 0;
 }
 
-
-/* ★ 3列に統一 */
-
-.food-container{
-    display:grid;
-    grid-template-columns:repeat(2, 1fr);
-    gap:40px;
-
+.rank-box {
+    min-width: 0;
+    background: #fff;
+    padding: 18px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s;
 }
 
-
-/* カード */
-
-.food-card{
-    background:white;
-    padding:25px;
-    border-radius:20px;
-    box-shadow:0 5px 20px rgba(0,0,0,0.1);
-    transition:0.3s;
+.rank-box:hover {
+    transform: translateY(-5px);
 }
 
-.food-card:hover{
-    transform:translateY(-8px);
+.rank-box img {
+    display: block;
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
-.food-card img{
-    width:100%;
-    height:220px;
-    object-fit:cover;
-    border-radius:15px;
+.rank-box h3 {
+    font-size: 17px;
+    margin: 12px 0 8px;
+    line-height: 1.6;
 }
 
-.food-card h3{
-    font-size:23px;
-    margin:15px 0;
+.rank-box .rank-description {
+    color: #555;
+    font-size: 13px;
+    line-height: 1.8;
 }
 
-.food-card p{
-    line-height:1.8;
+.ranking-more {
+    margin-top: 45px;
+    padding: 25px;
+    text-align: center;
+    background: #fff;
+    border-radius: 15px;
 }
 
+.ranking-more p {
+    margin-bottom: 15px;
+}
+
+.ranking-more a,
+.food-next a {
+    display: inline-block;
+    padding: 13px 28px;
+    background: #c7955a;
+    color: #fff;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.ranking-more a:hover,
+.food-next a:hover {
+    background: #a9783f;
+    transform: translateY(-2px);
+}
 
 /* =========================
    食事で意識したこと
 ========================= */
 
-.point{
-    width:800px;
-    max-width:90%;
-    margin:80px auto;
-    background:white;
-    padding:40px;
-    border-radius:20px;
+.point {
+    width: 850px;
+    max-width: 90%;
+    margin: 80px auto;
+    padding: 45px;
+    background: #fff;
+    border-radius: 22px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
 }
 
-.point li{
-    font-size:18px;
-    margin:15px;
+.point .point-subtitle {
+    color: #c7955a;
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    margin-bottom: 10px;
 }
 
+.point h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.point ul {
+    list-style: none;
+    max-width: 550px;
+    margin: 0 auto;
+}
+
+.point li {
+    position: relative;
+    font-size: 17px;
+    line-height: 1.8;
+    margin: 15px 0;
+    padding: 13px 15px 13px 45px;
+    background: #f8f4ee;
+    border-radius: 10px;
+}
+
+.point li::before {
+    content: "✓";
+    position: absolute;
+    left: 16px;
+    color: #c7955a;
+    font-weight: bold;
+}
 
 /* =========================
-   運動スケジュール
+   次のページへのリンク・フッター
 ========================= */
 
-.suke{
-    width:900px;
-    max-width:90%;
-    margin:80px auto;
+.food-next {
+    width: 850px;
+    max-width: 90%;
+    margin: 70px auto;
+    padding: 35px 20px;
+    text-align: center;
+    background: #fff;
+    border-radius: 20px;
 }
 
-.suke h2,
-.kiso h2{
-    text-align:center;
-    font-size:35px;
-    margin-bottom:30px;
+.food-next p {
+    margin-bottom: 20px;
+    font-size: 17px;
 }
 
-
-/* 表 */
-
-table{
-    width:100%;
-    border-collapse:collapse;
-    background:white;
+.site-footer {
+    padding: 30px 15px;
+    text-align: center;
+    background: #fff;
+    color: #777;
+    font-size: 13px;
 }
-
-th{
-    background:#eee;
-}
-
-th,
-td{
-    padding:20px;
-    border:1px solid #ddd;
-    text-align:center;
-}
-
 
 /* =========================
-   基礎代謝
+   トレーニング：スケジュール
 ========================= */
 
-.kiso{
-    width:800px;
-    max-width:90%;
-    margin:80px auto;
-    background:white;
-    padding:40px;
-    border-radius:20px;
-    line-height:2;
+.suke {
+    width: 1000px;
+    max-width: 90%;
+    margin: 80px auto;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.94);
+    border-radius: 22px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
 }
 
-.kiso h3{
-    margin-top:25px;
+.table-wrap {
+    width: 100%;
+    overflow-x: auto;
 }
 
-.keisan{
-    margin-top:30px;
-    padding:20px;
-    background:#fafafa;
-    border-radius:15px;
+.suke table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
 }
 
+.suke th {
+    background: #f0e5d6;
+    color: #5b4632;
+}
+
+.suke th,
+.suke td {
+    padding: 17px 15px;
+    border: 1px solid #e4d9cc;
+    text-align: center;
+    line-height: 1.7;
+}
+
+.suke tbody tr:nth-child(even) {
+    background: #faf7f2;
+}
+
+.schedule-note {
+    margin-top: 20px;
+    color: #666;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+/* =========================
+   トレーニング：基礎代謝
+========================= */
+
+.kiso {
+    width: 1000px;
+    max-width: 90%;
+    margin: 80px auto;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.94);
+    border-radius: 22px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+    line-height: 1.9;
+}
+
+.kiso-intro {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.formula-box {
+    padding: 22px;
+    margin-bottom: 20px;
+    background: #f8f4ee;
+    border-radius: 15px;
+}
+
+.formula-box h3 {
+    color: #a9783f;
+    margin-bottom: 10px;
+}
+
+.formula-box p {
+    overflow-wrap: anywhere;
+}
+
+.keisan {
+    margin-top: 25px;
+    padding: 25px;
+    background: #faf7f2;
+    border-radius: 15px;
+}
+
+.keisan h3 {
+    margin-bottom: 20px;
+}
+
+.bmr-results {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px;
+}
+
+.bmr-results div {
+    padding: 20px;
+    background: #fff;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.bmr-results span {
+    display: block;
+    margin-bottom: 8px;
+    color: #666;
+}
+
+.bmr-results strong {
+    color: #a9783f;
+    font-size: 21px;
+}
+
+/* =========================
+   トレーニング：カロリー計算
+========================= */
+
+.kcal {
+    width: 1000px;
+    max-width: 90%;
+    margin: 80px auto;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.94);
+    border-radius: 22px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+    line-height: 1.9;
+}
+
+.kcal-intro {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.activity-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.activity-box {
+    padding: 22px 15px;
+    background: #f8f4ee;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.activity-box h3 {
+    margin-bottom: 12px;
+    font-size: 18px;
+}
+
+.activity-box p {
+    margin-bottom: 15px;
+    font-size: 13px;
+}
+
+.activity-box strong {
+    color: #a9783f;
+    font-size: 23px;
+}
+
+.kcal .kcal-note {
+    margin-top: 18px;
+    color: #666;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.kcal-example {
+    margin-top: 35px;
+    padding: 30px 20px;
+    background: #f8f4ee;
+    border-radius: 16px;
+    text-align: center;
+}
+
+.kcal-example h3 {
+    margin-bottom: 15px;
+    font-size: 23px;
+}
+
+.calculation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 25px 0;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.calculation span {
+    margin: 0 5px;
+}
+
+.calculation strong {
+    color: #a9783f;
+    font-size: 30px;
+}
 
 /* =========================
    タブレット
 ========================= */
 
-@media(max-width:1024px){
-
-    h1{
-        font-size:50px;
+@media (max-width: 1024px) {
+    header h1 {
+        font-size: 50px;
     }
 
-    nav ul{
-        gap:25px;
+    nav ul {
+        gap: 16px 25px;
     }
 
-    nav a{
-        font-size:16px;
+    nav a {
+        font-size: 16px;
     }
 
-    .rank-area{
-        flex-direction:column;
+    .rank-area {
+        grid-template-columns: 1fr;
     }
 
-    .rank-first{
-        width:600px;
-        max-width:100%;
+    .rank-first {
+        width: 100%;
     }
 
-    .rank-list{
-        grid-template-columns:repeat(2,1fr);
-        width:100%;
+    .rank-list {
+        width: 100%;
     }
 
-    .food-container{
-        grid-template-columns:repeat(2,1fr);
+    .food-heading {
+        padding: 45px 20px;
     }
 
+    .food-card img {
+        height: 230px;
+    }
+
+    .suke,
+    .kiso,
+    .kcal {
+        padding: 32px;
+    }
 }
-
 
 /* =========================
    スマホ
 ========================= */
 
-@media(max-width:600px){
-
-    header{
-        padding:30px 10px;
+@media (max-width: 600px) {
+    header {
+        padding: 30px 12px;
     }
 
-    /* タイトル */
-
-    h1{
-        font-size:32px;
-        letter-spacing:2px;
-        margin-bottom:25px;
+    header h1 {
+        font-size: 32px;
+        letter-spacing: 2px;
+        margin-bottom: 25px;
     }
 
-
-    /* メニュー */
-
-    nav ul{
-        flex-direction:column;
-        gap:12px;
+    nav ul {
+        flex-direction: column;
+        gap: 12px;
     }
 
-    nav a{
-        font-size:15px;
+    nav a {
+        font-size: 15px;
     }
 
-
-    /* ランキング */
-
-    .ranking{
-        max-width:90%;
-        margin:50px auto;
+    /* 共通見出し */
+    .food-heading {
+        margin: 35px auto 45px;
+        padding: 30px 15px;
     }
 
-    .ranking h2{
-        font-size:26px;
-        margin-bottom:35px;
+    .food-heading h2 {
+        font-size: 28px;
     }
 
-    .rank-first{
-        width:100%;
+    .food-heading .food-catch {
+        font-size: 26px;
     }
 
-    .rank-first img{
-        height:280px;
+    .food-heading .food-subtitle {
+        font-size: 10px;
+        letter-spacing: 3px;
     }
 
-    .rank-list{
-        grid-template-columns:1fr 1fr;
-        gap:15px;
+    .food-heading .intro {
+        font-size: 14px;
     }
 
-    .rank-box{
-        padding:12px;
+    /* HOMEランキング */
+    .ranking {
+        margin: 45px auto;
     }
 
-    .rank-box img{
-        height:120px;
+    .ranking h2 {
+        font-size: 26px;
+        margin-bottom: 15px;
     }
 
-    .rank-box h3{
-        font-size:16px;
+    .ranking-intro {
+        font-size: 14px;
+        margin-bottom: 28px;
     }
 
-
-    /* 食事管理 */
-
-    .food-page{
-        width:90%;
-        margin:50px auto;
+    .rank-area {
+        gap: 20px;
     }
 
-    .food-page h2,
-    .point h2,
-    .schedule h2,
-    .metabolism h2{
-        font-size:28px;
+    .rank-first {
+        padding: 18px;
     }
 
-    .intro{
-        font-size:16px;
+    .rank-first img {
+        height: 250px;
     }
 
-
-    /* スマホでは1列 */
-
-    .food-container{
-        grid-template-columns:1fr;
-        gap:25px;
+    .rank-first h3 {
+        font-size: 22px;
     }
 
-    .food-card img{
-        height:220px;
+    .rank-list {
+        gap: 12px;
     }
 
+    .rank-box {
+        padding: 12px;
+    }
+
+    .rank-box img {
+        height: 120px;
+    }
+
+    .rank-box h3 {
+        font-size: 15px;
+    }
+
+    .rank-box .rank-description {
+        font-size: 12px;
+    }
+
+    /* 食事・食材・運動カード */
+    .food-page {
+        width: 90%;
+        margin: 45px auto;
+    }
+
+    .food-section-title,
+    .training-section-title {
+        margin-bottom: 28px;
+    }
+
+    .food-section-title h2,
+    .training-section-title h2 {
+        font-size: 25px;
+    }
+
+    .food-section-title > span,
+    .training-section-title > span {
+        font-size: 12px;
+    }
+
+    .intro {
+        font-size: 15px;
+    }
+
+    .food-container {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    .food-card {
+        padding: 16px;
+    }
+
+    .food-card img {
+        height: 230px;
+    }
+
+    .food-card h3 {
+        font-size: 22px;
+    }
+
+    .food-card > p:last-child {
+        font-size: 14px;
+    }
 
     /* ポイント */
-
-    .point{
-        width:90%;
-        padding:25px;
+    .point {
+        width: 90%;
+        padding: 28px 18px;
+        margin: 50px auto;
     }
 
-
-    /* スケジュール */
-
-    .schedule{
-        width:90%;
+    .point h2 {
+        font-size: 25px;
     }
 
-    th,
-    td{
-        padding:12px 5px;
-        font-size:13px;
+    .point li {
+        font-size: 14px;
+        padding-left: 40px;
     }
 
-
-    /* 基礎代謝 */
-
-    .metabolism{
-        width:90%;
-        padding:25px;
+    /* 次のページ・フッター */
+    .food-next {
+        padding: 28px 15px;
+        margin: 50px auto;
     }
 
-}
-/* =========================
-   カロリー計算
-========================= */
-
-.kcal{
-    width:800px;
-    max-width:90%;
-    margin:80px auto;
-    background:white;
-    padding:40px;
-    border-radius:20px;
-    line-height:1.8;
-}
-
-.kcal h2{ 
-    text-align:center;
-    font-size:35px;
-    margin-bottom:20px;
-}
-
-.kcal-intro{ /*サブタイトル*/
-    text-align:center;
-    margin-bottom:35px;
-}
-
-
-/* 活動量 */
-
-.activity-list{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:15px;
-}
-
-.activity-box{
-    background:#f5f1eb;
-    padding:20px;
-    border-radius:15px;
-    text-align:center;
-}
-
-.activity-box h3{
-    margin-bottom:10px;
-}
-
-.activity-box p{
-    font-size:14px;
-    margin-bottom:15px;
-}
-
-.activity-box strong{
-    color:#c7955a;
-    font-size:18px;
-}
-
-
-/* 計算例 */
-
-.kcal-example{
-    margin-top:35px;
-    padding:25px;
-    background:#fafafa;
-    border-radius:15px;
-    text-align:center;
-}
-
-.kcal-example h3{
-    font-size:22px;
-    margin-bottom:15px;
-}
-
-.calculation{
-    margin:20px 0;
-    font-size:25px;
-    font-weight:bold;
-}
-
-.calculation span{ /*一部分を指定する*/
-    margin:0 10px;
-}
-
-.calculation strong{ /*重要な部分を強調する*/
-    color:#c7955a;
-    font-size:30px;
-}
-
-.kcal-note{
-    font-size:14px;
-    margin-top:20px;
-}
-
-
-/* スマホ */
-
-@media(max-width:600px){
-
-    .kcal{
-        width:90%;
-        padding:25px;
+    .food-next p {
+        font-size: 14px;
     }
 
-    .kcal h2{
-        font-size:28px;
+    /* スケジュール・基礎代謝・カロリー */
+    .suke,
+    .kiso,
+    .kcal {
+        width: 90%;
+        padding: 25px 18px;
+        margin: 50px auto;
     }
 
-    .activity-list{
-        grid-template-columns:1fr;
-        gap:15px;
+    .suke th,
+    .suke td {
+        padding: 12px 8px;
+        font-size: 12px;
     }
 
-    .calculation{ 
-        font-size:20px;
+    .schedule-note,
+    .kcal .kcal-note {
+        font-size: 12px;
     }
 
-    .calculation strong{
-        font-size:25px;
+    .formula-box {
+        padding: 16px;
     }
 
+    .bmr-results {
+        grid-template-columns: 1fr;
+    }
+
+    .bmr-results strong {
+        font-size: 19px;
+    }
+
+    .activity-list {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .activity-box {
+        padding: 22px;
+    }
+
+    .calculation {
+        font-size: 19px;
+    }
+
+    .calculation strong {
+        font-size: 24px;
+    }
+
+    .kcal-example {
+        padding: 25px 12px;
+    }
 }

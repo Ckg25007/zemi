@@ -38,43 +38,80 @@
 </nav>
 
 <!-- 夜景スライダー -->
-<div id="branding">
 
-  <ul class="slider">
+<!-- HOMEメインビジュアル -->
+<main class="home-hero">
 
-    <li>
-        <a href="kurume.html">
-        <img src="images/素材/北九州/IMG_8136.png" alt="高良山">
+    <div class="hero-copy">
+        <p class="hero-subtitle">DISCOVER FUKUOKA AFTER DARK</p>
+
+        <h1>
+            夜に出会う、<br>
+            <span>福岡の絶景。</span>
+        </h1>
+
+        <p class="hero-description">
+            街の灯り、港の光、山から見下ろす夜景。<br>
+            福岡の魅力的な夜景スポットを紹介します。
+        </p>
+    </div>
+
+    <!-- 夜景スライダー -->
+    <div id="branding">
+        <ul class="slider">
+
+            <li>
+                <a href="kurume.html">
+                    <img src="images/素材/北九州/IMG_8136.png" alt="高良山の夜景">
+                </a>
+            </li>
+
+            <li>
+                <a href="kitakyusyu.html">
+                    <img src="images/素材/北九州/IMG_1532.png" alt="足立公園・展望台の夜景">
+                </a>
+            </li>
+
+            <li>
+                <a href="hakata.html">
+                    <img src="images/素材/博多/IMG_0477.png" alt="油山からの夜景">
+                </a>
+            </li>
+
+        </ul>
+    </div>
+
+    <div class="hero-scroll">
+        <span>SCROLL TO DISCOVER</span>
+        <span class="scroll-line"></span>
+    </div>
+
+</main>
+
+<!-- エリア紹介 -->
+<section class="home-areas">
+
+    <p class="area-subtitle">EXPLORE THE NIGHT</p>
+    <h2>エリアから夜景を探す</h2>
+
+    <div class="area-links">
+        <a href="hakata.html" class="area-link">
+            <span>AREA 01</span>
+            <strong>博多・福岡市</strong>
+            <p>街を彩るきらめき</p>
         </a>
-    </li>
 
-    <li>
-        <a href="kitakyusyu.html">
-        <img src="images/素材/北九州/IMG_1532.png" alt="足立公園・展望台">
+        <a href="kurume.html" class="area-link">
+            <span>AREA 02</span>
+            <strong>久留米・筑後</strong>
+            <p>自然と街が織りなす夜景</p>
         </a>
-    </li>
 
-    <li>
-        <a href="hakata.html">
-        <img src="images/素材/博多/IMG_0477.png" alt="油山">
+        <a href="kitakyusyu.html" class="area-link">
+            <span>AREA 03</span>
+            <strong>北九州</strong>
+            <p>港と工場の幻想的な光</p>
         </a>
-    </li>
-    
-</ul>
-</div>
+    </div>
 
-
-<!-- スライダー設定 -->
-<script>
-
-$('.slider').slick({ // $ → jQueryを使う
-
-    autoplay:true,        // 自動再生
-    autoplaySpeed:5000, // 切り替え速度
-    dots:true             // 下の丸を表示
-
-});
-
-</script>
-</body>
-</html>
+</section>
